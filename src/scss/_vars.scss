@@ -1,0 +1,12 @@
+@mixin roboto-bold {
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+}
+
+@mixin roboto-regular {
+  font-family: "Roboto-Regular";
+  font-weight: 400;
+}
+
+$accent: #FF7143;
+$second: #FDE7DA;

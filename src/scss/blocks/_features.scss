@@ -1,0 +1,32 @@
+.features {
+  padding: 80px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__item-title {
+    font-size: 24px;
+    @include roboto-bold;
+    margin-bottom: 12px;
+  }
+
+  &__item-text {
+    @include roboto-regular;
+    max-width: 247px;
+  }
+
+  &__item-img {
+    background-color: #FDE7DAff;
+    padding: 26px;
+  }
+}

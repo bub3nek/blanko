@@ -1,0 +1,145 @@
+.header {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 80px;
+    height: 100vh;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    padding-right: 32px;
+    margin-right: 32px;
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__email {
+    padding: 4px 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+
+  }
+
+  &__list {
+    display: flex;
+    gap: 35px;
+    display: flex;
+    align-items: center;
+    margin-right: 56px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 22px;
+
+
+    &:hover {
+
+      .header__dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+  }
+
+  &__link {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/arrow.svg);
+      background-repeat: no-repeat;
+      height: 9px;
+      width: 9px;
+      top: 0;
+      transform: translateY(50%);
+      right: -18px;
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+
+      &::after {
+        transform: rotate(180deg);
+        transition: all .3s ease-in-out;
+      }
+    }
+  }
+
+  &__nav-btns {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding-left: 56px;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.16);
+    height: 80px;
+  }
+
+  &__nav-sing {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icons/arrow.svg);
+      background-repeat: no-repeat;
+      height: 9px;
+      width: 9px;
+      top: 0;
+      transform: translateY(80%);
+      right: -18px;
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        transform: rotate(180deg);
+
+        transition: all .3s ease-in-out;
+      }
+    }
+  }
+
+  &__nav-buy {
+    color: black;
+    background-color: $accent;
+    @include roboto-bold;
+    padding: 12px 32px;
+    border-radius: 6px;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: white;
+    }
+  }
+}

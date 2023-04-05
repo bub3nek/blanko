@@ -1,0 +1,115 @@
+.footer {
+  color: white;
+  background-color: black;
+
+  &__up {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    ;
+    padding-bottom: 39px;
+    padding: 80px 0 40px;
+  }
+
+  &__up-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 90px;
+  }
+
+  &__up-btn {
+    color: black;
+    @include roboto-bold;
+    background-color: #fff;
+    padding: 12px 32px;
+    border-radius: 6px;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: black;
+      color: white;
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  &__up-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__up-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__up-sm {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__up-sm-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      fill: white;
+      height: 14px;
+      width: 14px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 29px 0;
+  }
+
+  &__bottom-left {
+    display: flex;
+    align-items: center;
+
+    svg {
+      fill: white;
+      height: 23px;
+      width: 89px;
+
+      &:nth-child(4) {
+        fill: $accent;
+        height: 24px;
+        width: 46px;
+      }
+    }
+
+    span {
+      margin-right: 12px;
+
+      &:nth-child(3) {
+        padding-left: 12px;
+      }
+    }
+  }
+
+  &__up-sm-link {
+
+    svg {
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+
+      svg {
+        transform: scale(1.2);
+        transition: all .3s ease-in-out;
+      }
+    }
+  }
+}
